@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+body.menu-open .container {
+    margin-top: 130px;
+}
+
+body.menu-mobile.open .menu-mobile.open {
+    display: block;
+    padding: 0;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.logo {
+    font-size: 3rem;
+}
+
+h1, h2, h3, li {
+    font-family: "Bebas Neue", serif;
+}
+
+.nav-list {
+    width: 100%;
+}
+
+.nav-lint li {
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease;
+}
+
+.nav-item {
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease;
+}
+
+.nav-list ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 70%;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.menu-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 2em;
+}
+
+.menu-mobile.open {
+    display: block;
+    padding: 0;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    margin: auto;
+    transition: margin-top 0.3s ease;
+}
+
+.sobre {
+    padding-top: 3rem;
+    width: 40%;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+.inicio a {
+    display: block;
+    width: 35%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    padding: 1rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease;
+}
+
+button:hover, a:hover, .nav-item {
+    transform: scale(1.05);
+}
+
+.obra1 {
+    padding-top: 4rem;
+}
+
+.obra1 h3 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    font-size: 2.7rem;
+}
+
+.conteudo-obra1 {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    border-radius: 25px;
+}
+
+a {
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease;
+}
+
+.conteudo-obra1 p {
+    padding-left: 3rem;
+}
+
+.obra2 {
+    padding-top: 8rem;
+    padding-bottom: 7rem;
+}
+
+.obra2 p {
+    padding-top: 4rem;
+    padding-bottom: 2.2rem;
+}
+
+.bases {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bases img {
+    height: 300px;
+    width: 420px;
+}
+
+.obra3 {
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+}
+
+.obra3 h3 {
+    text-align: center;
+    padding-bottom: 4rem;
+    padding-top: 0rem;
+}
+
+.body-obra3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-obra3 {
+    display: flex;
+}
+
+.obra3 p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.obra3 img {
+    width: 700px;
+}
+
+footer{
+    text-align: center;
+    margin: 1rem;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 480px) {
+    .nav-bar {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list ul {
+        padding: 0;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: none;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .menu-toggle {
+        background: none;
+        margin: 0;
+        border: none;
+    }
+
+    .menu-mobile .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        transition: margin-top 0.3s ease; 
+    }
+
+    .inicio {
+        padding-top: 3rem;
+    }
+
+    .sobre {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 2.7rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding-left: 0;
+    }
+
+    button {
+        margin-top:1rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    img {
+        height: 200px;
+        width: auto;
+    }
+
+    .obra1 {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+
+    .conteudo-obra1 {
+        flex-direction: column;
+    }
+
+    .conteudo-obra1 p {
+        padding-top: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .obra2 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .obra2 p {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .conteudo-obra2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bases {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bases img {
+        padding: 0.2rem;
+        height: 100px;
+        width: 150px;
+    }
+
+    .obra3 {
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    .body-obra3 {
+        flex-direction: column;
+    }
+
+    .obra3 h3 {
+        display: block;
+        padding: 0;
+        padding-top: 4rem;
+    }
+
+    .conteudo-obra3 {
+        display: block;
+    }
+
+    .obra3 p {
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    footer {
+        font-size: 0.6rem;
+        padding: 0.5rem;
+    }
+
+    .obra3 img {
+        padding: 1rem;
+        height: 200px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .logo {
+        font-size: 2.2rem;  
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list ul {
+        padding: 0;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: none;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .menu-toggle {
+        background: none;
+        margin: 0;
+        border: none;
+    }
+
+    .menu-mobile .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        transition: margin-top 0.3s ease;
+        max-width: 650px;
+    }
+
+    .inicio {
+        padding-top: 3rem;
+    }
+
+    .inicio a {
+        padding: 0.5rem;
+        width: 25%;
+    }
+
+    .sobre {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 2.7rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding-left: 0;
+    }
+
+    button {
+        margin-top:1rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    img {
+        height: 200px;
+        width: auto;
+    }
+
+    .obra1 {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+
+    .conteudo-obra1 p {
+        padding-top: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .obra2 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .obra2 p {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .conteudo-obra2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bases {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bases img {
+        padding: 0.2rem;
+        height: 150px;
+        width: 200px;
+    }
+
+    .obra3 {
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    .obra3 h3 {
+        padding: 0;
+        padding-top: 4rem;
+    }
+
+    .conteudo-obra3 {
+        align-items: center;
+    }
+
+    .obra3 p {
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .obra3 img {
+        padding: 1rem;
+        height: 200px;
+        width: 300px;
+    }
+
+    footer {
+        font-size: 0.6rem;
+        padding: 0.5rem;
+    }
+}

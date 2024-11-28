@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário</title>
+    <link rel="stylesheet" href="assets/css/formulario.css">
+    <script src="assets/js/formulario.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MultiMarte</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container" id="main-container">
+            <section class="pre-questionario" id="pre-questionario">
+                <div class="prequest">
+                    <h2>Nos ajude a melhorar ua eperiência!</h2>
+                    <p>Sua opinião faz a diferença! Queremos tornar a sua experiência ainda melhor, e para isso, precisamos da sua ajuda. Responder ao nosso questionário levará poucos minutos, e suas respostas serão fundamentais para moldar futuras melhorias. Junte-se a nós nessa jornada rumo a um serviço cada vez mais incrível!</p>
+                    <div class="links">
+                        <a href="index.html" class="btn-nao">Não</a>
+                        <button type="button" class="btn-sim" onclick="startQuiz()">Sim</button>
+                    </div>
+                </div>
+            </section>
+            <section class="inicio" id="inicio">
+                <div class="apresentação">
+                    <h2>Questionário de Satisfação</h2>
+                    <p>Este questionário tem como objetivo coletar feedback sobre a sua experiência em nossa visita ao Museu Multitemático. <br> Suas respostas nos ajudarão a entender melhor como podemos aprimorar nossas exposições, serviços e instalações, garantindo que sua visita seja cada vez mais satisfatória.</p>
+                    <button type="button" onclick="handleNext(event, 'inicio', 'email')">Próxima</button>
+                </div>
+            </section>
+            <!-- Email -->
+            <section class="email" id="email" style="display: none;">
+                <div class="form-email">
+                    <h2>Informe seu e-mail</h2>
+                    <form class="email-form">
+                        <div class="form-content">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+                        </div>
+                        <button type="button" onclick="handleNext(event, 'email', 'idade')">Próxima</button>
+                    </form>
+                </div>
+            </section>
+            <!--Idade-->
+            <section class="idade" id="idade" style="display: none;">
+                <div class="form-idade">
+                    <h2>Por favor, Informe sua data de nascimento</h2>
+                    <form class="nascimento">
+                        <div class="form-content">
+                            <label for="dataNascimento">Data de Nascimento:</label>
+                            <input type="date" id="dataNascimento" name="dataNascimento" required>
+                        </div>
+                        <button type="button" onclick="handleNext(event, 'idade', 'pergunta1')">Próxima</button>
+                    </form>
+                </div>
+            </section>
+            <!--Pergunta 1-->
+            <section class="pergunta" id="pergunta1">
+                <div class="form-perguntas">
+                    <h2>1. Como você avalia a organização das exposições no museu?</h2>
+                    <form class="quest">
+                        <div class="opções">
+                            <div>
+                                <input type="radio" value="Muito satisfeito" name="pergunta1" id="p1a" required>
+                                <label for="p1a">Muito satisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="satisfeito" name="pergunta1" id="p1b" required>
+                                <label for="p1b">Satisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Neutro" name="pergunta1" id="p1c" required>
+                                <label for="p1c">Neutro</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Insatisfeito" name="pergunta1" id="p1d" required>
+                                <label for="p1d">Insatisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Muito insatisfeito" name="pergunta1" id="p1e" required>
+                                <label for="p1e">Muito insatisfeito</label><br>
+                            </div>
+                        </div>
+                        <button class="btn-proximo" onclick="handleNext(event, 'pergunta1', 'pergunta2')">Próxima</button>
+                    </form>
+                </div>
+            </section>
+            <!--Pergunta 2-->
+            <section class="pergunta" id="pergunta2">
+                <div class="form-perguntas">
+                    <h2>2. Qual a sua satisfação com a clareza das informações nas exposições?</h2>
+                    <form class="quest">
+                        <div class="opções">
+                            <div>
+                                <input type="radio" value="Muito satisfeito" name="pergunta2" id="p2a" required>
+                                <label for="p2a">Muito satisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="satisfeito" name="pergunta2" id="p2b">
+                                <label for="p2b">Satisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Neutro" name="pergunta2" id="p2c">
+                                <label for="p2c">Neutro</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Insatisfeito" name="pergunta2" id="p2d">
+                                <label for="p2d">Insatisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Muito insatisfeito" name="pergunta2" id="p2e">
+                                <label for="p2e">Muito insatisfeito</label><br>
+                            </div>
+                        </div>
+                        <button onclick="handleNext(event, 'pergunta2', 'pergunta3')">Próxima</button>
+                    </form>
+                </div>
+            </section>
+            <!--Pergunta 3-->
+            <section class="pergunta" id="pergunta3">
+                <div class="form-perguntas">
+                    <h2>3. Como você avalia a variedade de temas abordados nas exposições?</h2>
+                    <form class="quest">
+                        <div class="opções">
+                            <div>
+                                <input type="radio" value="Muito satisfeito" name="pergunta3" id="p3a" required>
+                                <label for="p3a">Muito satisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="satisfeito" name="pergunta3" id="p3b">
+                                <label for="p3b">Satisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Neutro" name="pergunta3" id="p3c">
+                                <label for="p3c">Neutro</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Insatisfeito" name="pergunta3" id="p3d">
+                                <label for="p3d">Insatisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Muito insatisfeito" name="pergunta3" id="p3e">
+                                <label for="p3e">Muito insatisfeito</label><br>
+                            </div>
+                        </div>
+                        <button onclick="handleNext(event, 'pergunta3', 'pergunta4')">Próxima</button>
+                    </form>
+                </div>
+            </section>
+            <!--Pergunta 4-->
+            <section class="pergunta" id="pergunta4">
+                <div class="form-perguntas">
+                    <h2>4. A experiência no museu conseguiu atender ou superar suas expectativas?</h2>
+                    <form class="quest">
+                        <div class="opções">
+                            <div>
+                                <input type="radio" value="Muito satisfeito" name="pergunta4" id="p4a" required>
+                                <label for="p4a">Muito satisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="satisfeito" name="pergunta4" id="p4b">
+                                <label for="p4b">Satisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Neutro" name="pergunta4" id="p4c">
+                                <label for="p4c">Neutro</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Insatisfeito" name="pergunta4" id="p4d">
+                                <label for="p4d">Insatisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Muito insatisfeito" name="pergunta4" id="p4e">
+                                <label for="p4e">Muito insatisfeito</label><br>
+                            </div>
+                        </div>
+                        <button onclick="handleNext(event, 'pergunta4', 'pergunta5')">Próxima</button>
+                    </form>
+                </div>
+            </section>
+            <!--Pergunta 5-->
+            <section class="pergunta" id="pergunta5">
+                <div class="form-perguntas">
+                    <h2>5. Como você avaliaria a sua intenção de visitar o museu novamente?</h2>
+                    <form class="quest">
+                        <div class="opções">
+                            <div>
+                                <input type="radio" value="Muito satisfeito" name="pergunta5" id="p5a" required>
+                                <label for="p5a">Muito satisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="satisfeito" name="pergunta5" id="p5b">
+                                <label for="p5b">Satisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Neutro" name="pergunta5" id="p5c">
+                                <label for="p5c">Neutro</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Insatisfeito" name="pergunta5" id="p5d">
+                                <label for="p5d">Insatisfeito</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" value="Muito insatisfeito" name="pergunta5" id="p5e">
+                                <label for="p5e">Muito insatisfeito</label><br>
+                            </div>
+                        </div>
+                        <button onclick="handleNext(event, 'pergunta5', 'feedback')">Próxima</button>
+                    </form>
+                </div>
+        </section>
+        <!--Feedback-->
+            <section class="feedback" id="feedback" style="display: none;">
+                <div class="form-perguntas">
+                    <h2>Deixe seu Feedback e ajude-nos a melhorar!</h2>
+                    <form class="feed">
+                        <legend>Feedback</legend>
+                        <div class="txta-btn">
+                            <textarea name="comentarios" id="comentarios" rows="5" cols="50" placeholder="Deixe seu comentário..."></textarea>
+                            </fieldset>
+                            <button type="button" onclick="handleNext(event, 'feedback', 'relatorio')">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <!--Relatório-->
+            <section class="relatorio" id="relatorio" style="display: none;">
+                <div class="form-relatorio">
+                    <h2>Relatório Final</h2>
+                    <p>Aqui está um resumo das suas respostas:</p>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Perguntas</th>
+                                <th>Respostas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Linhas dinâmicas serão inseridas aqui -->
+                        </tbody>
+                    </table>
+                    <button onclick="handleNext(event, 'relatorio', 'agradecimento')">Finalizar</button>
+                </div>
+            </section>
+            <!--Agradecimento-->
+            <section class="agradecimento" id="agradecimento" style="display: none;">
+                <div class="agradecer">
+                    <h2>Obrigado pelo feedback!</h2>
+                        <p>Agradecemos por compartilhar suas opniões e ajudar-nos a melhorar.</p>
+                        <a href="index.html" class="btn-link">Início</a>
+                    </div>
+                </div>
+            </section>   
+        </div>
+    </main>
+    <footer>
+        &copy; MultiMarte 2024
+    </footer>
+</body>
+</html>
